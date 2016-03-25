@@ -1,4 +1,4 @@
 # Summary
 
-* [Introduction](README.md)
+* [课程简介](README.md)
 
