@@ -6,5 +6,5 @@
    * [stu0](第一次作业/stu0.md)
 * [第二次作业](第二次作业/README.md)
    * stu1
-* [目录](SUMMARY.md)
+* [SUMMARY](SUMMARY.md)
 
