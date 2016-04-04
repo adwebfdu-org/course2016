@@ -2,7 +2,7 @@
 
 本课程的文档以 gitbook 的形式进行 host, 地址在[这里](https://www.gitbook.com/@adwebfdu)
 
-2016年 PJ 文档**[下载地址](/data/pj2016.pdf)**
+2016年 PJ 文档**[下载地址](http://adwebfdu.github.io/data/pj2016.pdf)**
 
 # 收集 github 账号
 ---
