@@ -15,7 +15,7 @@
 # 作业提交方式
 ---
 
-提交作业时, 请先 clone 这个 github repository [adwebfdu-org/course2016](https://github.com/adwebfdu-org/course2016), 然后在相应文件夹内创建命名为`学号.md`的 markdown文件, 里面写上自己的作业文档.
+提交作业时, 请先 clone 这个 github repository [adwebfdu-org/course2016](https://github.com/adwebfdu-org/course2016), 然后在相应文件夹内创建命名为`学号_姓名.md`的 markdown文件, 里面写上自己的作业文档.
 
 之后助教会根据大家的提交情况, 同步课程 gitbook 目录, 显示大家提交的作业.
 
