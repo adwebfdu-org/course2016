@@ -5,7 +5,6 @@
 2016年 PJ 文档**[下载地址](http://adwebfdu.github.io/data/pj2016.pdf)**
 
 # 收集 github 账号
----
 
 请大家先注册 github 账号, 然后在 `issues` 里面的 `github账号收集` 这个 issue 下面发表评论, 写上自己的姓名, 学号和 github 账号, 具体例子请参考具体 issue.
 
@@ -13,7 +12,6 @@
 
 
 # 作业提交方式
----
 
 提交作业时, 请先 clone 这个 github repository [adwebfdu-org/course2016](https://github.com/adwebfdu-org/course2016), 然后在相应文件夹内创建命名为`学号_姓名.md`的 markdown文件, 里面写上自己的作业文档.
 
@@ -21,6 +19,5 @@
 
 
 # PJ提交方式
----
 
 提交 PJ 时, 按照上述方法建立 private repository 之后, 大家将基于 github 进行合作, 代码和相关资源请同步到自己的 repository, 然后类似于作业提交的方式, 在 [adwebfdu-org/course2016](https://github.com/adwebfdu-org/course2016) 中提交相关文档.
