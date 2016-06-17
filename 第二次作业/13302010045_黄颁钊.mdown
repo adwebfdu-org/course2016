@@ -1,0 +1,3 @@
+本次作业我参考WebGL的系列入门教程做了一个旋转3D立方体  
+[项目repo](https://github.com/ultra7677/ADWEBLab2)  
+文档见repo里面的README.md    
