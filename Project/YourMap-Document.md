@@ -21,9 +21,9 @@
 
 ####1. 项目设计
 ####1.1 设计框架
-前端使用AngularJS的MVC框架部署，完成View和Controller分离，并在测试前端时使用Model管理测试样例数据。Controller管理前端页面跳转逻辑、与后台交互的请求逻辑等业务逻辑，View管理各个页面渲染。
+前端使用AngularJS的MVC框架部署，使得View和Controller分离，并在测试前端时使用Model管理测试样例数据。Controller管理前端页面跳转、前后台交互等业务逻辑，View负责各个页面渲染。
 
-前后端业务分离，后台使用Spring-Struts-Hibernate框架部署，其中Spring负责集成管理，在applicationContext.xml中使用java bean封装数据库driver、数据库Dao、各个action handler以及service层的对象，提供了控制反转的条件；Struts管理action，负责接收和处理前台请求url，在struts.xml中把url和对应的处理类挂钩起来；Hibernate提供了EntityDAO对数据库的通用访问接口，添加Service层，根据业务需求设计数据库访问和存储的调用EntityDAO的代码。
+前后端业务分离，后台使用Spring-Struts-Hibernate框架部署，其中Spring负责集成管理，在applicationContext.xml中使用java bean封装数据库driver、数据库Dao、各个action handler以及service层的对象，提供了控制反转的条件；Struts管理action，负责接收和处理前台请求url，在struts.xml中把url和对应的处理类挂钩起来；Hibernate提供了EntityDAO对数据库的通用访问接口，通过添加Service层，根据业务需求调用EntityDAO，设计数据库访问存储的的代码。
 
 ####1.2 关键功能点
 
@@ -32,7 +32,7 @@
 ```JavaScript
 var map = new BMap.Map("container");
 ```
-在前端AngularJS代码中调用百度地图的JavaScript开发API，使用定位控件、平移缩放控件、比例尺控件和自定义控件等地图控件，与地图UI交互、实现相关的业务需求。
+在前端AngularJS代码中调用百度地图的JavaScript开发API，使用定位控件、平移缩放控件、比例尺控件和自定义控件等地图控件，与地图UI交互相关的业务需求。
 
 定位控件：
 ```JavaScript
@@ -61,7 +61,7 @@ var myDetailCtrl = new lookSightDetail();
 // 添加到地图当中
 map.addControl(myDetailCtrl);
 ```
-使用覆盖物Overlay接口标识指定区域，并使用标注Marker操作百度地图的景点，
+使用覆盖物Overlay接口标识指定区域，并通过标注Marker使用百度地图中已有的景点，
 ````JavaScript
 var point = new BMap.Point(121.48, 31.22);
 var marker = new BMap.Marker(point);
@@ -70,7 +70,7 @@ map.addOverlay(marker);
 ```
 
 #### 用户数据的上传和发布
-Web2.0是一个连接了众多普通用户创建的内容而构建的网络，相比传统的Web1.0，网络数据由官方的机构作为服务端发布，普通用户作为客户端访问数据，Web2.0支持用户上传数据。本应用支持用户评价，对景点打分，上传图片、视频和模型等不同类型的文件，前端界面收集用户发布的这些数据，使用AngularJS的$http对象将数据发送给后台，后台根据请求url，查找Struts.xml定位到action handler类，接收数据，并存储文件到云端服务器。当用户在前端请求数据时，后端以JSON的形式将数据返回给前端，前台Controller逻辑接收数据，Html View将数据渲染成页面效果。
+相比传统的Web1.0中，网络数据由官方的机构作为服务端发布，普通用户只能作为客户端访问数据，Web2.0是一个连接了众多普通用户创建的内容而构建的网络。Web2.0支持用户上传数据，本应用支持用户评价，对景点打分，上传图片、视频和模型等不同类型的文件，前端界面收集用户发布的这些数据，使用AngularJS的$http对象将数据发送给后台，后台根据请求url，查找Struts.xml定位到action handler类，接收数据，并存储文件到云端服务器。当用户在前端请求数据时，后端以JSON的形式将数据返回给前端，前台Controller接收数据，Html View将数据渲染成页面效果。
 
 #### 使用Three.js 的3D景观展示
 本应用中对于复旦大学和世博园中国馆添加了景观3D模型，3D模型的搭建包括材质、贴图、光线方面的处理。首先在maya中建模，然后用github上three.js项目中的exporter把maya中建好的中国馆模型导出成json文件，因为maya中的材质与three.js中的材质不通用，要在three.js中通过代码设置材质。在three.js中用THREE.JSONLoader导入JSON文件。中国馆的主体部分采用Phong材质可以体现金属的光泽，玻璃部分采用Lambert材质并设置为透明。光线采用平行光颜色白色。相机移动方式为Orbit，可以用左键控制镜头角度，右键控制相机位置，中键控制镜头远近。maya与three.js的三维空间不同，需要把从maya导入的模型沿y轴旋转-90度，沿x轴旋转90度。
@@ -101,7 +101,7 @@ public double computeSimilarity(int a, int b) {
 ```
 
 #### 基于GitHub的第三方登录
-大致步骤为（1）创建访问第三方应用（GitHub）登陆页面的引导
+具体步骤为（1）创建访问第三方应用（GitHub）登陆页面的入口
 （2）用户在第三方应用上登陆完成后，第三方应用返回code，
 （3）本应用再给第三方发送带有code的登陆请求
 （4）code验证成功后，第三方应用返回access token
@@ -114,7 +114,7 @@ public double computeSimilarity(int a, int b) {
 ####2.1 分工安排
 百度地图API使用、景观相关页面前台逻辑、搜索历史实现 ------ 秦海峰
 
-用户管理相关页面前台逻辑、交互设计、界面设计 ------ 雷丽暇
+用户管理相关页面前台逻辑、交互设计、界面优化调整 ------ 雷丽暇
 
 Service层访问数据库接口设计与实现、Action Handler设计与实现、第三方登录实现 ------ 陈晨光
 
@@ -131,7 +131,7 @@ PJ布置-5月中旬 ------ 需求理解、前后端接口定义、前端页面�
 
 6月中旬- 6月下旬 ------ 推荐算法实现、3D模型搭建、景观素材库搭建
 
-6月29日凌晨 ------ 界面优化、测试与调整、文档编写
+6月29日凌晨 ------ 界面优化调整、测试与调整、文档编写
 
 ####3 代码链接
 
