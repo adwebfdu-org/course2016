@@ -139,3 +139,4 @@ PJ布置-5月中旬 ------ 需求理解、前后端接口定义、前端页面�
 
 [后台代码](https://github.com/hfqin/YourMapServer)
 
+[文档PDF版](https://github.com/hfqin/YourMapServer/blob/master/YourMap-%E6%96%87%E6%A1%A3.pdf)
