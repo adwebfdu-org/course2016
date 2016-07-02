@@ -12,6 +12,7 @@
 WebService_Server：https://github.com/adweb1314/adweb_service
 
 WebServiceClient_Server：https://github.com/adweb1314/adweb_serviceClient
+
 ----
 # 高级Web技术Project文档
 
@@ -32,8 +33,8 @@ WebServiceClient_Server：https://github.com/adweb1314/adweb_serviceClient
 
 (3)对于一些特定逻辑，本project中使用了W3C中SOAP、WSDL规范的WebService技术，开发了基于SOAP调用服务、基于WSDL描述服务调用接口的WebService。对于WebService的实现，项目采用Axis2框架部署服务，服务逻辑使用纯净的POJO进行开发，服务的部署、发布、调用则借助Axis2框架实现。借助WebService技术，这些服务可以无障碍地直接在不同平台、不同语言中进行远程调用。这使得不只是在Web开发方面，进一步在不同要求的开发背景下也均能实现不同要求的服务远程调用。
 
-	![系统架构](http://a3.qpic.cn/psb?/9b204d79-d74b-4541-b873-14a3a61ad6e6/8n2a5nhKxfzkFqxz78rOJAnBoGLtkFT9U02A*ovOF7w!/b/dOMAAAAAAAAA&bo=UQSAAgAAAAADAPI!&rf=viewer_4)
-	图1 系统架构
+![系统架构](http://a3.qpic.cn/psb?/9b204d79-d74b-4541-b873-14a3a61ad6e6/8n2a5nhKxfzkFqxz78rOJAnBoGLtkFT9U02A*ovOF7w!/b/dOMAAAAAAAAA&bo=UQSAAgAAAAADAPI!&rf=viewer_4)
+图1 系统架构
 
 ###二、项目提交说明
 
@@ -56,8 +57,8 @@ WebServiceClient_Server：https://github.com/adweb1314/adweb_serviceClient
 	/www/index.html中为对所有css、js、webAPI-js的引入及项目调试、执行的入口
 	开发及调试可利用静态部署（作为StaticWebProject部署）的方式直接运行index.html，部署需要在项目根目录执行cmd指令“Ionic build android”以输出apk文件。
 
-	![前端项目目录](http://a2.qpic.cn/psb?/9b204d79-d74b-4541-b873-14a3a61ad6e6/P7CKoc5SsmjR3VGohH2LpHDMMFdtb9lAxcin9kRUw1w!/b/dG8BAAAAAAAA&bo=TgGjAQAAAAADB88!&rf=viewer_4)
-	图2 adweb，前端项目目录
+![前端项目目录](http://a2.qpic.cn/psb?/9b204d79-d74b-4541-b873-14a3a61ad6e6/P7CKoc5SsmjR3VGohH2LpHDMMFdtb9lAxcin9kRUw1w!/b/dG8BAAAAAAAA&bo=TgGjAQAAAAADB88!&rf=viewer_4)
+图2 adweb，前端项目目录
 
 #####2、项目adweb_back
 
@@ -82,21 +83,21 @@ WebServiceClient_Server：https://github.com/adweb1314/adweb_serviceClient
 	/static目录下为后台所需所有静态资源（图片），在部署时将部署到部署路径的根路径，也可以直接在此部署静态Web项目
 	/application.yml——SpringBoot启动时的配置文件
 
-	![后端项目目录](http://a3.qpic.cn/psb?/9b204d79-d74b-4541-b873-14a3a61ad6e6/LMoZdvxFtE49cBd.yTa4TQB4aBLgFgR5nFoociMmZG0!/b/dOMAAAAAAAAA&bo=.wD5AQAAAAADACY!&rf=viewer_4)
-	图3 adweb_back，后端项目目录
+![后端项目目录](http://a3.qpic.cn/psb?/9b204d79-d74b-4541-b873-14a3a61ad6e6/LMoZdvxFtE49cBd.yTa4TQB4aBLgFgR5nFoociMmZG0!/b/dOMAAAAAAAAA&bo=.wD5AQAAAAADACY!&rf=viewer_4)
+图3 adweb_back，后端项目目录
 
 #####3、adweb_db：数据库数据、表结构导出
 
-	![数据库表预览录](http://a2.qpic.cn/psb?/9b204d79-d74b-4541-b873-14a3a61ad6e6/1A2MbaDX9ngFeyTr6Zj3JW5JdX21KvIIYRQ4T2IxHMc!/b/dI0BAAAAAAAA&bo=uwASAQAAAAADAI0!&rf=viewer_4)
-	图4 adweb_db，数据库表预览
+![数据库表预览录](http://a2.qpic.cn/psb?/9b204d79-d74b-4541-b873-14a3a61ad6e6/1A2MbaDX9ngFeyTr6Zj3JW5JdX21KvIIYRQ4T2IxHMc!/b/dI0BAAAAAAAA&bo=uwASAQAAAAADAI0!&rf=viewer_4)
+图4 adweb_db，数据库表预览
 
 #####4、adweb_service与adweb_serviceClient：Dynamic Web Project项目，Web Service的部署端与调用端，次要后台，仅在运行“新建景观”逻辑时需要开启此两项服务。
  
-	![adweb_service部署](http://a1.qpic.cn/psb?/9b204d79-d74b-4541-b873-14a3a61ad6e6/Hx9AoyJCnPSQhBwUTogJ*RxYwAyDdu*ySXiLBlTjzAI!/b/dHEBAAAAAAAA&bo=wAKjAAAAAAADAEQ!&rf=viewer_4)
-	图5 adweb_service部署
+![adweb_service部署](http://a1.qpic.cn/psb?/9b204d79-d74b-4541-b873-14a3a61ad6e6/Hx9AoyJCnPSQhBwUTogJ*RxYwAyDdu*ySXiLBlTjzAI!/b/dHEBAAAAAAAA&bo=wAKjAAAAAAADAEQ!&rf=viewer_4)
+图5 adweb_service部署
  
-	![adweb_serviceClient目录](http://a2.qpic.cn/psb?/9b204d79-d74b-4541-b873-14a3a61ad6e6/pEiil4EOFvpfIr8ikeqT7hQ6K44AgC3hxxHzn0g7lxk!/b/dOUAAAAAAAAA&bo=ZwFYAQAAAAADABo!&rf=viewer_4)
-	图6 adweb_serviceClient目录
+![adweb_serviceClient目录](http://a2.qpic.cn/psb?/9b204d79-d74b-4541-b873-14a3a61ad6e6/pEiil4EOFvpfIr8ikeqT7hQ6K44AgC3hxxHzn0g7lxk!/b/dOUAAAAAAAAA&bo=ZwFYAQAAAAADABo!&rf=viewer_4)
+图6 adweb_serviceClient目录
 
 ###三、项目分工
 
