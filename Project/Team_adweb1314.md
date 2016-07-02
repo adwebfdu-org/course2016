@@ -10,10 +10,6 @@
 ######WebServiceClient_Server：https://github.com/adweb1314/adweb_serviceClient
 ----
 # 高级Web技术Project文档
-
-####Team adweb1314
-####刘石坚 许海龙 徐昆
-
 ----
 
 ###一、系统架构
@@ -49,12 +45,12 @@
 #####1、项目：adweb
 
 ######项目adweb为project前端，Ionic项目，开发工作集中在/www目录下：
-######/www/css目录下为项目的样式设计，
-######/www/js目录下为项目所有控制、模型逻辑的实现，使用AngularJS，
-######/www/img为前台渲染时需要的个别图片内容
-######/www/lib存放Ionic对web开发相关的css与AngularJS支持，
-######/www/templates中为所有页面的html文件，设计遵循Ionic提供的支持完成。
-######/www/index.html中为对所有css、js、webAPI-js的引入及项目调试、执行的入口
+	/www/css目录下为项目的样式设计，
+	/www/js目录下为项目所有控制、模型逻辑的实现，使用AngularJS，
+	/www/img为前台渲染时需要的个别图片内容
+	/www/lib存放Ionic对web开发相关的css与AngularJS支持，
+	/www/templates中为所有页面的html文件，设计遵循Ionic提供的支持完成。
+	/www/index.html中为对所有css、js、webAPI-js的引入及项目调试、执行的入口
 
 ######开发及调试可利用静态部署（作为StaticWebProject部署）的方式直接运行index.html，部署需要在项目根目录执行cmd指令“Ionic build android”以输出apk文件。
 
@@ -68,19 +64,19 @@
 	项目分为三个子目录分别进行开发：
 	
 #####/src/main/java/pj目录，主后端要逻辑实现：
-######/bean目录下为个别前台回传数据的数据类
-######/ctrl目录下为前端请求的映射、处理、返回的实现类
-######/support目录下为一些辅助完成/ctrl中具体功能的类
-######/Application.java为运行后台的入口，SpringBoot内置Tomcat容器，无需部署即可作为服务器运行
+	/bean目录下为个别前台回传数据的数据类
+	/ctrl目录下为前端请求的映射、处理、返回的实现类
+	/support目录下为一些辅助完成/ctrl中具体功能的类
+	/Application.java为运行后台的入口，SpringBoot内置Tomcat容器，无需部署即可作为服务器运行
 ------
 #####/src/main/mybatis目录，全部数据库操作的实现（配置）
-######/entity目录下为前台回传数据、数据库表结构映射的数据类
-######/mapping目录下为实现数据库具体逻辑的xml配置文件，所有SQL语句所在
-######/mybatis-config.xml为数据库基本信息（URL、用户、密码）的配置文件
+	/entity目录下为前台回传数据、数据库表结构映射的数据类
+	/mapping目录下为实现数据库具体逻辑的xml配置文件，所有SQL语句所在
+	/mybatis-config.xml为数据库基本信息（URL、用户、密码）的配置文件
 ------
 #####/src/main/resources目录，静态资源部署等
-######/static目录下为后台所需所有静态资源（图片），在部署时将部署到部署路径的根路径，也可以直接在此部署静态Web项目
-######/application.yml——SpringBoot启动时的配置文件
+	/static目录下为后台所需所有静态资源（图片），在部署时将部署到部署路径的根路径，也可以直接在此部署静态Web项目
+	/application.yml——SpringBoot启动时的配置文件
 
 ![后端项目目录](http://a3.qpic.cn/psb?/9b204d79-d74b-4541-b873-14a3a61ad6e6/LMoZdvxFtE49cBd.yTa4TQB4aBLgFgR5nFoociMmZG0!/b/dOMAAAAAAAAA&bo=.wD5AQAAAAADACY!&rf=viewer_4)
 图3 adweb_back，后端项目目录
