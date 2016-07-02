@@ -34,16 +34,17 @@
 (3)对于一些特定逻辑，本project中使用了W3C中SOAP、WSDL规范的WebService技术，开发了基于SOAP调用服务、基于WSDL描述服务调用接口的WebService。对于WebService的实现，项目采用Axis2框架部署服务，服务逻辑使用纯净的POJO进行开发，服务的部署、发布、调用则借助Axis2框架实现。借助WebService技术，这些服务可以无障碍地直接在不同平台、不同语言中进行远程调用。这使得不只是在Web开发方面，进一步在不同要求的开发背景下也均能实现不同要求的服务远程调用。
 
 ![系统架构](http://a3.qpic.cn/psb?/9b204d79-d74b-4541-b873-14a3a61ad6e6/8n2a5nhKxfzkFqxz78rOJAnBoGLtkFT9U02A*ovOF7w!/b/dOMAAAAAAAAA&bo=UQSAAgAAAAADAPI!&rf=viewer_4)
+
 图1 系统架构
 
 ###二、项目提交说明
 
 	提交分为五个仓库（见https://github.com/adweb1314）
-#####1、adweb：Ionic项目，前端；
-#####2、adweb_back：Maven项目，主要后端；
-#####3、adweb_db：sql文件，开发、测试时数据库数据与表结构的导出；
-#####4、adweb_serviceClient：JavaEE Dynamic Web项目，次要后端；
-#####5、adweb_service：JavaEE Dynamic Web项目，WebService部署端。
+######1、adweb：Ionic项目，前端；
+######2、adweb_back：Maven项目，主要后端；
+######3、adweb_db：sql文件，开发、测试时数据库数据与表结构的导出；
+######4、adweb_serviceClient：JavaEE Dynamic Web项目，次要后端；
+######5、adweb_service：JavaEE Dynamic Web项目，WebService部署端。
 
 #####1、项目：adweb
 
@@ -58,29 +59,30 @@
 ######开发及调试可利用静态部署（作为StaticWebProject部署）的方式直接运行index.html，部署需要在项目根目录执行cmd指令“Ionic build android”以输出apk文件。
 
 ![前端项目目录](http://a2.qpic.cn/psb?/9b204d79-d74b-4541-b873-14a3a61ad6e6/P7CKoc5SsmjR3VGohH2LpHDMMFdtb9lAxcin9kRUw1w!/b/dG8BAAAAAAAA&bo=TgGjAQAAAAADB88!&rf=viewer_4)
+
 图2 adweb，前端项目目录
 
 #####2、项目adweb_back
 
 	项目adweb_back为project的主要后端，Maven项目，前端绝大多数逻辑由此提供支持。
 	项目分为三个子目录分别进行开发：
-------
-######/src/main/java/pj目录，主后端要逻辑实现：
+	
+#####/src/main/java/pj目录，主后端要逻辑实现：
 ######/bean目录下为个别前台回传数据的数据类
 ######/ctrl目录下为前端请求的映射、处理、返回的实现类
 ######/support目录下为一些辅助完成/ctrl中具体功能的类
 ######/Application.java为运行后台的入口，SpringBoot内置Tomcat容器，无需部署即可作为服务器运行
 ------
-######/src/main/mybatis目录，全部数据库操作的实现（配置）
+#####/src/main/mybatis目录，全部数据库操作的实现（配置）
 ######/entity目录下为前台回传数据、数据库表结构映射的数据类
 ######/mapping目录下为实现数据库具体逻辑的xml配置文件，所有SQL语句所在
 ######/mybatis-config.xml为数据库基本信息（URL、用户、密码）的配置文件
 ------
-######/src/main/resources目录，静态资源部署等
+#####/src/main/resources目录，静态资源部署等
 ######/static目录下为后台所需所有静态资源（图片），在部署时将部署到部署路径的根路径，也可以直接在此部署静态Web项目
 ######/application.yml——SpringBoot启动时的配置文件
 
- ![后端项目目录](http://a3.qpic.cn/psb?/9b204d79-d74b-4541-b873-14a3a61ad6e6/LMoZdvxFtE49cBd.yTa4TQB4aBLgFgR5nFoociMmZG0!/b/dOMAAAAAAAAA&bo=.wD5AQAAAAADACY!&rf=viewer_4)
+![后端项目目录](http://a3.qpic.cn/psb?/9b204d79-d74b-4541-b873-14a3a61ad6e6/LMoZdvxFtE49cBd.yTa4TQB4aBLgFgR5nFoociMmZG0!/b/dOMAAAAAAAAA&bo=.wD5AQAAAAADACY!&rf=viewer_4)
 图3 adweb_back，后端项目目录
 
 #####3、adweb_db：数据库数据、表结构导出
